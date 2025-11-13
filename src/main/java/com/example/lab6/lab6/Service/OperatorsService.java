@@ -43,8 +43,8 @@ public class OperatorsService {
         ApplicationRequests request = requestsRepository.findById(requestId).orElse(null);
 
         if (operator != null && request != null) {
-            request.getOperators().add(operator);  // добавляем оператора к заявке
-            return requestsRepository.save(request); // сохраняем обновлённую заявку
+            request.getOperators().add(operator);
+            return requestsRepository.save(request);
         }
 
         return null;
